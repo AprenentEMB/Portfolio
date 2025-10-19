@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Montserrat', 'Poppins', 'Roboto', 'Nunito', sans-serif;
+    background-color: #0c4a6e;
+}
+
+@layer utilities {
+  .custom-line {
+    height: 0.7px;
+    width: 3rem; /* w-12 */
+    margin-right: 1rem; /* mr-4 */
+    background-color: #64748b; /* slate-400*/
+    transition: all 0.3s;
+  }
+
+  .custom-line-active {
+    width: 6rem; /* w-24 */
+    background-color: #e4e4e7; /* slate-200 */
+  }
+  .group:hover .custom-line {
+    width: 6rem; /* w-24 */
+    background-color: #e4e4e7; /* slate-200 */
+  }
+}
