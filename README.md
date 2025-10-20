@@ -53,9 +53,19 @@ This site showcases my web development work, highlights what I’m currently bui
 
 ---
 
-## 📄 License
+## License
 
-This project is open-source under the [MIT License](./LICENSE).
+This project is intended for **portfolio and demonstration purposes only**.  
+All rights are reserved by the author.
+
+You are **not permitted** to:
+
+- Use the code for commercial purposes  
+- Modify or redistribute it  
+- Publish it as your own project or product
+
+If you're interested in using or collaborating on this project, please contact me.
+
 
 
 
