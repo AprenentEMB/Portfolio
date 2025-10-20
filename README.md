@@ -25,13 +25,14 @@ This site showcases my web development work, highlights what I’m currently bui
 ## 📸 Screenshots
 
 > Preview of the portfolio website:
-
+<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:flex-start">
 <img src="./public/screenshots/portfolio-1.png" alt="Portfolio homepage" width="240" />
 <img src="./public/screenshots/portfolio-2.png" alt="Projects section" width="240" />
 <img src="./public/screenshots/portfolio-3.png" alt="Project detail modal" width="240" />
 <img src="./public/screenshots/portfolio-4.png" alt="Mobile view" width="240" />
 <img src="./public/screenshots/portfolio-5.png" alt="Contact section" width="240" />
 <img src="./public/screenshots/portfolio-6.png" alt="Light/dark mode" width="240" />
+</div>
 
 ---
 
