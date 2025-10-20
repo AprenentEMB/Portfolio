@@ -38,8 +38,8 @@ This site showcases my web development work, highlights what I’m currently bui
 
 ## 🌐 Live Demo
 
-👉 [enricmoles.dev](https://enricmoles.dev)  
-*(Replace with actual live link if needed)*
+👉 [enricmoles.dev](https://portfolio-eight-indol-wbh18yj8nm.vercel.app/)  
+
 
 ---
 
