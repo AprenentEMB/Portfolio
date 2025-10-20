@@ -1,16 +1,60 @@
-# React + Vite
+# 💼 Enric Moles — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean and minimal developer portfolio inspired by [Brittany Chiang](https://brittanychiang.com/).  
+This site showcases my web development work, highlights what I’m currently building, and gives a brief overview of who I am.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- 🖼️ Interactive project gallery with screenshots, details, and external links
+- 🔗 Smooth scrolling with active section highlighting
+- 📱 Fully responsive and accessible layout
+- 🔍 Modal viewer for project images
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚛️ [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+- 💨 [Tailwind CSS](https://tailwindcss.com/) for utility-first styling
+- 📁 Data-driven project rendering from a JSON list
+
+---
+
+## 📸 Screenshots
+
+> Preview of the portfolio website:
+
+<img src="./public/screenshots/portfolio-1.png" alt="Portfolio homepage" width="240" />
+<img src="./public/screenshots/portfolio-2.png" alt="Projects section" width="240" />
+<img src="./public/screenshots/portfolio-3.png" alt="Project detail modal" width="240" />
+<img src="./public/screenshots/portfolio-4.png" alt="Mobile view" width="240" />
+<img src="./public/screenshots/portfolio-5.png" alt="Contact section" width="240" />
+<img src="./public/screenshots/portfolio-6.png" alt="Light/dark mode" width="240" />
+
+---
+
+## 🌐 Live Demo
+
+👉 [enricmoles.dev](https://enricmoles.dev)  
+*(Replace with actual live link if needed)*
+
+---
+
+## 👤 Author
+
+**Enric Moles**
+
+- 🔗 GitHub: [@AprenentEMB](https://github.com/AprenentEMB)  
+- 💼 LinkedIn: [Enric Moles](https://www.linkedin.com/in/enric-moles-bellveh%C3%AD-7358b024a/)  
+- 📧 Email: [enricmoles94@email.com](mailto:enricmoles94@email.com)
+
+---
+
+## 📄 License
+
+This project is open-source under the [MIT License](./LICENSE).
+
+
+
