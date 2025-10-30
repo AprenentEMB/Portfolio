@@ -33,8 +33,27 @@ const projects = [
   ],
   technologies: ["React", "TypeScript", "Vite", "TailwindCSS", "Zustand", "TanStack", "Node.js", "Express", "Supabase"],
 },
-  {
+  
+{
   id: 3,
+  title: "MYWeek",
+  description: "A weekly planner app to fully customize your schedule with advanced features.",
+  url: "https://my-week-six.vercel.app/", // posa aquí l'URL real quan la tinguis
+  fullDescription:
+    "MYWeek is a comprehensive weekly planner application that lets users organize their schedule visually and efficiently. Features include splitting and merging time slots, erasing entries, changing fonts, painting cells, adding activities, undo/redo actions, resetting the planner, moving hours, and exporting schedules as PDF. Built with React, TypeScript, Vite, TailwindCSS, Zustand, Framer Motion, and i18n for full localization support.",
+  thumbnail: "/images/myweek-thumb.png",
+  images: [
+    "/images/myweek-1.png",
+    "/images/myweek-2.png",
+    "/images/myweek-3.png",
+    "/images/myweek-4.png",
+    "/images/myweek-5.png",
+    "/images/myweek-6.png"
+  ],
+  technologies: ["React", "TypeScript", "Vite", "TailwindCSS", "Zustand", "Framer Motion", "i18n"],
+},
+{
+  id: 4,
   title: "Ascendra (In Progress...)",
   description: "An e-commerce platform for discovering and buying climbing shoes with custom filters and user personalization.",
   url: "",
@@ -45,7 +64,7 @@ const projects = [
     "/images/ascendra-1.png"
   ],
   technologies: ["React", "Vite", "TailwindCSS", "TypeScript", "Zustand", "API", "Tanstack", "Node.js", "Express", "Supabase"],
-}
+},
 
   // Add more projects as needed
   // {

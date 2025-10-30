@@ -19,7 +19,9 @@ export function Projects() {
             <img
               src={project.thumbnail}
               alt={project.title}
-              className="w-full md:w-1/3 rounded-lg shadow-md group-hover:scale-[1.02] transition-transform duration-300 object-cover max-h-28"
+              className="w-full md:w-1/3 rounded-lg shadow-md group-hover:scale-[1.02] transition-transform duration-300 object-cover aspect-video"
+
+
             />
 
             <div className="flex flex-col justify-center ">
