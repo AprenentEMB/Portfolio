@@ -26,6 +26,7 @@ export function Projects() {
                     {project.title}
                   </h3>
                   {project.url && (
+                    {/*}
                     <button
                       onClick={(e) => {
                         e.stopPropagation()
@@ -48,6 +49,7 @@ export function Projects() {
                         />
                       </svg>
                     </button>
+                    */}
                   )}
                 </div>
                 <p className="text-slate-400 mt-2 text-sm">

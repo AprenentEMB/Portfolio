@@ -1,20 +1,32 @@
 export function About() {
   return (
     
-    <section className="my-4 mt-8" id="about">
+   <section className="my-4 mt-8" id="about">
   <p className="text-md text-slate-400 tracking-wide font-light pt-16">
-    I'm Enric Moles, a front-end developer based in Barcelona, passionate about building <span className="text-slate-300">modern, accessible, and functional user interfaces.</span> 
+    I'm Enric Moles, a front-end developer based in Barcelona, passionate about building 
+    <span className="text-slate-300"> modern, accessible, and functional user interfaces.</span> 
     I enjoy making sure a website visually aligns with its underlying concept while also being fast and performant.
   </p>
 
   <p className="text-md text-slate-400 tracking-wide font-light mt-4">
     I started learning to code on my own, driven by the realization that programming allows creative ideas to become real, functional projects — and gives you the tools to solve meaningful problems. 
-    I followed this passion by completing several <strong>freeCodeCamp</strong> certifications (HTML, CSS, and Front-End Developer) and diving into <strong>React</strong> and <strong>Node.js</strong> through <strong>Midudev's courses</strong>, alongside constantly building personal projects.
+    I followed this passion by completing several <strong>freeCodeCamp</strong> certifications (HTML, CSS, and Front-End Developer) and diving into <strong>React</strong> and <strong>Node.js</strong> through <strong>Midudev's courses</strong>, alongside constantly building personal projects such as <strong>e-commerce websites</strong> and <strong>portfolio pages</strong>.
   </p>
 
   <p className="text-md text-slate-400 tracking-wide font-light mt-4">
-    These days, I work with tools like <span className="text-slate-300">React (powered by <strong>Vite</strong>), <strong>JavaScript/TypeScript</strong>, <strong>TailwindCSS</strong>, <strong>Zustand</strong>, and the <strong>TanStack Router</strong> and <strong>TanStack Query</strong>.</span>
-    I'm also learning the basics of back-end development using <span className="text-slate-300"><strong>Node.js</strong>, <strong>Express</strong>, and <strong>Zod</strong></span> to better understand full-stack workflows.
+    These days, I work with tools like 
+    <span className="text-slate-300">
+      React (powered by <strong>Vite</strong>), <strong>JavaScript/TypeScript</strong>, <strong>TailwindCSS</strong>, <strong>Zustand</strong>, and the <strong>TanStack Router</strong> and <strong>TanStack Query</strong>.
+    </span>
+    I'm also learning the basics of back-end development using 
+    <span className="text-slate-300"><strong>Node.js</strong>, <strong>Express</strong>, and <strong>Zod</strong></span> 
+    to better understand full-stack workflows.
+  </p>
+
+  <p className="text-md text-slate-400 tracking-wide font-light mt-4">
+    In addition to my personal development work, I'm currently collaborating with <strong>SkillGap</strong>, where I help build and maintain internal tools and applications using technologies like 
+    <span className="text-slate-300"><strong>React</strong>, <strong>Node.js</strong>, and <strong>Firebase</strong></span>. 
+    This experience is strengthening my understanding of real-world development pipelines and scalable architectures.
   </p>
 
   <p className="text-md text-slate-400 tracking-wide font-light mt-4">
@@ -26,6 +38,7 @@ export function About() {
     Outside of coding, you'll find me producing <strong>electronic music</strong>, <strong>rock climbing</strong>, practicing <strong>yoga</strong>, or enjoying good food and exploring new recipes.
   </p>
 </section>
+
 
   )
 }
