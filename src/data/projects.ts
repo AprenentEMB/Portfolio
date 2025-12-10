@@ -1,74 +1,49 @@
 const projects = [
   {
-  id: 1,
-  title: "MyHabits",
-  description: "A habit tracker app to build and maintain routines effectively.",
-  url: "https://habits-omega-two.vercel.app/",
-  fullDescription:
-    "A full-stack habit tracking application with user authentication, customizable habits, and progress analytics. Users can create and categorize habits, track completion streaks, and visualize progress through charts and a calendar view. Includes a point system to motivate consistency and performance.",
-  thumbnail: "/images/myhabits-thumb.png",
-  images: [
-    "/images/myhabits-1.png",
-    "/images/myhabits-2.png",
-    "/images/myhabits-3.png",
-    "/images/myhabits-4.png",
-    "/images/myhabits-5.png",
-  ],
-  technologies: ["React", "TypeScript", "TailwindCSS", "Zustand", "Node.js", "Prisma", "PostgreSQL"],
-},
-{
-  id: 2,
-  title: "Isaac Films",
-  description: "A movie discovery and list management app using the TMDB API.",
-  url: "https://isaac-films.vercel.app/",
-  fullDescription:
-    "A web application that allows users to search, discover, and organize movies using data from the TMDB API. Users can create custom lists, add notes, sort entries, and explore trending or top-rated films, offering a personalized movie tracking experience.",
-  thumbnail: "/images/isaac-films-thumb.png",
-  images: [
-    "/images/isaac-films-1.png",
-    "/images/isaac-films-2.png",
-    "/images/isaac-films-3.png",
-    "/images/isaac-films-4.png",
-    "/images/isaac-films-5.png",
-  ],
-  technologies: ["React", "TypeScript", "Vite", "TailwindCSS", "Zustand", "TanStack", "Node.js", "Express", "Supabase"],
-},
-  
-{
-  id: 3,
-  title: "MYWeek",
-  description: "A weekly planner app to fully customize your schedule with advanced features.",
-  url: "https://my-week-six.vercel.app/", 
-  fullDescription:
-    "MYWeek is a comprehensive weekly planner application that lets users organize their schedule visually and efficiently. Features include splitting and merging time slots, erasing entries, changing fonts, painting cells, adding activities, undo/redo actions, resetting the planner, moving hours, and exporting schedules as PDF. Built with React, TypeScript, Vite, TailwindCSS, Zustand, Framer Motion, and i18n for full localization support.",
-  thumbnail: "/images/myweek-thumb.png",
-  images: [
-    "/images/myweek-1.png",
-    "/images/myweek-2.png",
-    "/images/myweek-3.png",
-    "/images/myweek-4.png",
-    "/images/myweek-5.png",
-    "/images/myweek-6.png"
-  ],
-  technologies: ["React", "TypeScript", "Vite", "TailwindCSS", "Zustand", "Framer Motion", "i18n"],
-},
-{
-  id: 4,
-  title: "Ascendra (In Progress...)",
-  description: "An e-commerce platform for discovering and buying climbing shoes with custom filters and user personalization.",
-  url: "",
-  fullDescription:
-    "An e-commerce web application focused on climbing footwear. Users can create accounts, save favorites, and browse through dynamically organized sections such as featured, best-selling, and brand-specific collections. The platform supports advanced filtering by price, brand, and popularity to streamline product discovery and improve the shopping experience.",
-  thumbnail: "/images/ascendra-thumb.png",
-  images: [
-    "/images/ascendra-1.png"
-  ],
-  technologies: ["React", "Vite", "TailwindCSS", "TypeScript", "Zustand", "API", "Tanstack", "Node.js", "Express", "Supabase"],
-},
-
-  // Add more projects as needed
-  // {
-  // Afegir més projectes...
+    id: 1,
+    title: "Ascendra",
+    description: "An e-commerce platform for skincare products (in progress).",
+    url: "",
+    fullDescription:
+      "Ascendra is a modern e-commerce web application focused on skincare. Users can browse products, filter by category and popularity, create accounts, and manage favorites. Backend integration and checkout system are currently under development.",
+    thumbnail: "/images/ascendra-thumb.png",
+    images: ["/images/ascendra-1.png"],
+    technologies: ["React", "Nextjs", "TailwindCSS", "TypeScript", "Zustand", "Strapi"],
+  },
+  {
+    id: 2,
+    title: "EasyBeats Portfolio",
+    description: "A portfolio website for the beatmaker EasyBeats, built to showcase music and projects.",
+    url: "https://easybeats-portfolio.vercel.app/",
+    fullDescription:
+      "This project is a personal portfolio for EasyBeats, a beatmaker. Built to demonstrate skills in modern web development, responsive design, and showcasing audio content. Highlights expertise in creating visually appealing portfolios with Astro and TailwindCSS.",
+    thumbnail: "/images/easybeats-thumb.png",
+    images: [
+      "/images/easybeats-1.png",
+      "/images/easybeats-2.png",
+      "/images/easybeats-3.png"
+    ],
+    technologies: ["Astro", "TypeScript", "TailwindCSS"],
+  },
+  {
+    id: 3,
+    title: "MYWeek",
+    description: "A weekly planner app to fully customize your schedule.",
+    url: "https://my-week-six.vercel.app/",
+    fullDescription:
+      "MYWeek is a comprehensive weekly planner that lets users visually organize their schedules. Features include time slot management, undo/redo, PDF export, localization support, and customization options for fonts and colors.",
+    thumbnail: "/images/myweek-thumb.png",
+    images: [
+      "/images/myweek-1.png",
+      "/images/myweek-2.png",
+      "/images/myweek-3.png",
+      "/images/myweek-4.png",
+      "/images/myweek-5.png",
+      "/images/myweek-6.png",
+    ],
+    technologies: ["React", "TypeScript", "Vite", "TailwindCSS", "Zustand", "Framer Motion", "i18n"],
+  },
 ]
 
 export default projects
+
