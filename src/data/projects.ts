@@ -38,7 +38,7 @@ const projects = [
   id: 3,
   title: "MYWeek",
   description: "A weekly planner app to fully customize your schedule with advanced features.",
-  url: "https://my-week-six.vercel.app/", // posa aquí l'URL real quan la tinguis
+  url: "https://my-week-six.vercel.app/", 
   fullDescription:
     "MYWeek is a comprehensive weekly planner application that lets users organize their schedule visually and efficiently. Features include splitting and merging time slots, erasing entries, changing fonts, painting cells, adding activities, undo/redo actions, resetting the planner, moving hours, and exporting schedules as PDF. Built with React, TypeScript, Vite, TailwindCSS, Zustand, Framer Motion, and i18n for full localization support.",
   thumbnail: "/images/myweek-thumb.png",
