@@ -7,21 +7,28 @@ const projects = [
     fullDescription:
       "Ascendra is a modern e-commerce web application focused on skincare. Users can browse products, filter by category and popularity, create accounts, and manage favorites. Backend integration and checkout system are currently under development.",
     thumbnail: "/images/ascendra-thumb.png",
-    images: ["/images/ascendra-1.png"],
+    images: ["/images/ascendra-1.png",
+      "/images/ascendra-2.png",
+      "/images/ascendra-3.png",
+      "/images/ascendra-4.png",
+      "/images/ascendra-5.png",
+      "/images/ascendra-6.png",
+      "/images/ascendra-7.png"
+    ],
     technologies: ["React", "Nextjs", "TailwindCSS", "TypeScript", "Zustand", "Strapi"],
   },
   {
     id: 2,
-    title: "EasyBeats Portfolio",
-    description: "A portfolio website for the beatmaker EasyBeats, built to showcase music and projects.",
-    url: "https://easybeats-portfolio.vercel.app/",
+    title: "LaVibra",
+    description: "A portfolio website for the sound designer LaVibra, built to showcase music and projects.",
+    url: "https://lavibra-portfolio.vercel.app/",
     fullDescription:
-      "This project is a personal portfolio for EasyBeats, a beatmaker. Built to demonstrate skills in modern web development, responsive design, and showcasing audio content. Highlights expertise in creating visually appealing portfolios with Astro and TailwindCSS.",
-    thumbnail: "/images/easybeats-thumb.png",
+      "This project is a personal portfolio for LaVibra, a sound designer. Built to demonstrate skills in modern web development, responsive design, and showcasing audio content. Highlights expertise in creating visually appealing portfolios with Astro and TailwindCSS.",
+    thumbnail: "/images/lavibra-thumb.png",
     images: [
-      "/images/easybeats-1.png",
-      "/images/easybeats-2.png",
-      "/images/easybeats-3.png"
+      "/images/lavibra-1.png",
+      "/images/lavibra-2.png",
+      "/images/lavibra-3.png"
     ],
     technologies: ["Astro", "TypeScript", "TailwindCSS"],
   },
