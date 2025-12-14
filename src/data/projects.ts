@@ -17,21 +17,23 @@ const projects = [
     ],
     technologies: ["React", "Nextjs", "TailwindCSS", "TypeScript", "Zustand", "Strapi"],
   },
-  {
-    id: 2,
-    title: "LaVibra",
-    description: "A portfolio website for the sound designer LaVibra, built to showcase music and projects.",
-    url: "https://lavibra-portfolio.vercel.app/",
-    fullDescription:
-      "This project is a personal portfolio for LaVibra, a sound designer. Built to demonstrate skills in modern web development, responsive design, and showcasing audio content. Highlights expertise in creating visually appealing portfolios with Astro and TailwindCSS.",
-    thumbnail: "/images/lavibra-thumb.png",
-    images: [
-      "/images/lavibra-1.png",
-      "/images/lavibra-2.png",
-      "/images/lavibra-3.png"
-    ],
-    technologies: ["Astro", "TypeScript", "TailwindCSS"],
-  },
+{
+  id: 2,
+  title: "BielRaspall FPV",
+  description: "A portfolio website showcasing Biel Raspall's drone projects and aerial footage.",
+  url: "https://bielportf.vercel.app/",
+  fullDescription:
+    "This project is a personal portfolio for Biel Raspall, a drone pilot and technology enthusiast. Built to showcase drone videos, photography, and technical projects. Highlights skills in aerial cinematography, web development with Astro, and responsive design using TailwindCSS.",
+  thumbnail: "/images/biel-thumb.png",
+  images: [
+    "/images/biel-1.png",
+    "/images/biel-2.png",
+    "/images/biel-3.png",
+    "/images/biel-4.png",
+    "/images/biel-5.png"
+  ],
+  technologies: ["Astro", "TypeScript", "TailwindCSS", "Drone FPV"],
+},
   {
     id: 3,
     title: "MYWeek",
