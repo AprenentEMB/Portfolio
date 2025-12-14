@@ -57,35 +57,45 @@ export function InProgress() {
       <div className="text-slate-400 text-md tracking-wide font-light space-y-4">
         <p>
           I’m currently focused on building and refining{' '}
-          <strong>EasyBeats</strong> — a portfolio and showcase platform for the
-          beatmaker EasyBeats. This project helps me practice integrating
-          multimedia content, responsive design, and modern web frameworks like
-          Astro and TailwindCSS.
+          <strong>MyHabits</strong> — a habit tracking application designed to
+          help users build consistency and improve their daily routines. This
+          project allows me to go deeper into backend development while keeping
+          a clean and intuitive front-end experience.
         </p>
 
         <p>
-          In parallel, I’m exploring new features and interactions that enhance
-          user experience, aiming to create a visually appealing and functional
-          portfolio that highlights both music and development skills.
+          My main focus is on designing a solid system architecture that handles
+          user data, habits, and activity logs efficiently, while exploring
+          automation strategies to enhance the overall user experience.
         </p>
 
         <div className="border-l-4 border-emerald-400 pl-4 mt-6">
           <h3 className="text-xl font-semibold text-slate-300 mb-1">
-            🚧 Main focus: EasyBeats Portfolio
+            🚧 Main focus: MyHabits App
           </h3>
+
           <p>
-            The EasyBeats project is a portfolio web app for a beatmaker. It
-            includes sections to showcase music tracks, projects, and
-            collaborations. I’m currently working on layout improvements,
-            responsive design, and backend integration for content management.
+            MyHabits is a full-stack habit tracking web application. I’m
+            currently building the backend using <strong>Node.js</strong>,{' '}
+            <strong>Prisma</strong>, and <strong>Supabase</strong>, focusing on
+            database design, authentication, and scalable data access.
           </p>
+
           <p className="mt-2">
-            The goal is to create a clean, professional, and scalable portfolio
-            that demonstrates my web development capabilities and provides a
-            solid experience for users exploring the artist's work.
+            I’m also implementing automation systems for habit streaks,
+            progress tracking, and scheduled processes, with the goal of
+            creating a production-ready backend that supports growth and future
+            features.
+          </p>
+
+          <p className="mt-2">
+            The objective is to deliver a robust, maintainable, and scalable
+            application that showcases my ability to design backend systems and
+            work comfortably across the full stack.
           </p>
         </div>
       </div>
     </section>
   )
 }
+
