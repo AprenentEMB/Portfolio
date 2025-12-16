@@ -17,12 +17,12 @@ export function Projects() {
               <img
                 src={project.thumbnail}
                 alt={project.title}
-                className="w-full md:w-1/3 rounded-lg shadow-md group-hover:scale-[1.02] transition-transform duration-300 object-cover aspect-video"
+                className="w-full md:w-1/2 rounded-lg shadow-md group-hover:scale-[1.02] transition-transform duration-300 object-contain aspect-video"
               />
 
               <div className="flex flex-col justify-center">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-normal text-slate-300 group-hover:text-teal-400">
+                  <h3 className="text-xl font-normal text-yellow-500 group-hover:text-yellow-400">
                     {project.title}
                   </h3>
 
@@ -52,7 +52,6 @@ export function Projects() {
   </button>
 )}
 */}
-
                 </div>
 
                 <p className="text-slate-400 mt-2 text-sm">
@@ -84,4 +83,3 @@ export function Projects() {
     </section>
   )
 }
-

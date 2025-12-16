@@ -82,10 +82,9 @@ export function InProgress() {
           </p>
 
           <p className="mt-2">
-            I’m also implementing automation systems for habit streaks,
-            progress tracking, and scheduled processes, with the goal of
-            creating a production-ready backend that supports growth and future
-            features.
+            I’m also implementing automation systems for habit streaks, progress
+            tracking, and scheduled processes, with the goal of creating a
+            production-ready backend that supports growth and future features.
           </p>
 
           <p className="mt-2">
@@ -98,4 +97,3 @@ export function InProgress() {
     </section>
   )
 }
-

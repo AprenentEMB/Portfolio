@@ -1,5 +1,5 @@
 import {  Link, useNavigate } from '@tanstack/react-router'
-import { useEffect, useState } from 'react'
+import { useEffect, useState} from 'react'
 import { About, InProgress } from './About&Skills'
 import { Projects } from './Projects'
 
@@ -67,7 +67,7 @@ useEffect(() => {
   }
 
   return (
-    <div className="flex flex-col lg:flex-row bg-gradient-to-br from-black via-slate-900 to-sky-900">
+    <div className="flex flex-col lg:flex-row bg-gradient-to-br from-black via-(--color-midnight) to-zinc-900">
 
 
 
@@ -76,7 +76,7 @@ useEffect(() => {
 
         <div>
           <h1 className="text-5xl text-slate-300 font-semibold mb-2 pt-20">Enric Moles</h1>
-          <p className="mb-6 text-slate-300 text-xl">Front End Developer</p>
+          <p className="mb-6 text-yellow-500/80 text-xl">Full Stack Developer</p>
           <p className="mb-6 text-slate-400 text-l font-light w-2/3">Focused on crafting accessible, responsive and modern web experiences.</p>
           <nav className="hidden sm:fixed sm:flex flex-col space-y-3 mt-16 text-xs">
             <div className="flex flex-row space-x-4 mt-2">
@@ -84,7 +84,7 @@ useEffect(() => {
             <Link
               to="/about"
                 onClick={handleAboutClick}
-              className={`transition-all font-medium duration-300 flex flex-row items-center group ${activeSection === 'about' ? 'text-sky-400' : 'hover:text-sky-400'}`}
+              className={`transition-all font-medium duration-300 flex flex-row items-center group ${activeSection === 'about' ? 'text-yellow-400' : 'hover:text-yellow-400'}`}
               
             >
                 <div className= {`${activeSection === 'about' ? 'custom-line custom-line-active' : 'custom-line'}`}></div>
@@ -95,8 +95,8 @@ useEffect(() => {
             <Link
               to="/projects"
                 onClick={handleProjectsClick}
-              className={`transition-all font-medium duration-300 flex flex-row items-center group ${activeSection === 'projects' ? 'text-sky-400' : 'hover:text-sky-400'}`}
-              
+              className={`transition-all font-medium duration-300 flex flex-row items-center group ${activeSection === 'projects' ? 'text-yellow-400' : 'hover:text-yellow-400'}`}
+
             >
                 <div className= {`${activeSection === 'projects' ? 'custom-line custom-line-active' : 'custom-line'}`}></div>
               <span className='transition-all duration-300 group-hover:ml-4'>PROJECTS</span>
@@ -107,8 +107,8 @@ useEffect(() => {
             <Link
               to="/in-progress"
                 onClick={handleInProgressClick}
-              className={`transition-all font-medium duration-300 flex flex-row items-center group ${activeSection === 'in-progress' ? 'text-sky-400' : 'hover:text-sky-400'}`}
-              
+              className={`transition-all font-medium duration-300 flex flex-row items-center group ${activeSection === 'in-progress' ? 'text-yellow-400' : 'hover:text-yellow-400'}`}
+
             >
                <div className= {`${activeSection === 'in-progress' ? 'custom-line custom-line-active' : 'custom-line'}`}></div>
               <span className='transition-all duration-300 group-hover:ml-4'>IN PROGRESS</span>
