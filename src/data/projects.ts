@@ -3,7 +3,7 @@ const projects = [
     id: 1,
     title: "Ascendra",
     description: "An e-commerce platform for skincare products (in progress).",
-    url: "",
+    url: "https://ascendra-zeta.vercel.app/es",
     fullDescription:
       "Ascendra is a modern e-commerce web application focused on skincare. Users can browse products, filter by category and popularity, create accounts, and manage favorites. Backend integration and checkout system are currently under development.",
     thumbnail: "/images/ascendra-thumb.png",
