@@ -13,7 +13,8 @@ const projects = [
       "/images/ascendra-4.png",
       "/images/ascendra-5.png",
       "/images/ascendra-6.png",
-      "/images/ascendra-7.png"
+      "/images/ascendra-7.png",
+      "/images/ascendra-8.png"
     ],
     technologies: ["React", "Nextjs", "TailwindCSS", "TypeScript", "Zustand", "Strapi"],
   },
