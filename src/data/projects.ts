@@ -46,11 +46,11 @@ const projects = [
   },
   {
     id: 3,
-    title: 'MYWeek',
+    title: 'WeekMePro',
     description: 'A weekly planner app to fully customize your schedule.',
     url: 'https://www.weekmepro.com',
     fullDescription:
-      'MYWeek is a comprehensive weekly planner that lets users visually organize their schedules. Features include time slot management, undo/redo, PDF export, localization support, and customization options for fonts and colors.',
+      'WeekMePro is a comprehensive weekly planner that lets users visually organize their schedules. Features include time slot management, undo/redo, PDF export, localization support, and customization options for fonts and colors.',
     thumbnail: '/images/myweek-thumb.png',
     images: [
       '/images/myweek-1.png',
