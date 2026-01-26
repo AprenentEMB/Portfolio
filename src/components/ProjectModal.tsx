@@ -1,4 +1,13 @@
-export function ProjectModal({ project, onClose }) {
+interface ProjectModalProps {
+  project: {
+    title: string
+    images: string[]
+    fullDescription: string
+  }
+  onClose: () => void
+}
+
+export function ProjectModal({ project, onClose }: ProjectModalProps) {
   return (
     <div className="fixed inset-0 bg-transparent backdrop-blur-xs z-50 flex justify-center items-center">
       <div className="bg-gray-900 p-6 rounded-lg max-w-4xl w-full relative">

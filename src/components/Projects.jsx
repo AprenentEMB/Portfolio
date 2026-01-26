@@ -2,16 +2,16 @@ import { useState } from 'react'
 import { ProjectModal } from './ProjectModal'
 import projects from '../data/projects'
 
-export function Projects() {
+export function Projects({id}) {
   const [selectedProject, setSelectedProject] = useState(null)
 
   return (
-    <section id="projects" className="py-20">
+    <section id={id} className="py-20">
       <div className="flex flex-col gap-12 my-8 h-[40%]">
         {projects.map((project) => (
           <div key={project.id}>
             <div
-              className="flex flex-col md:flex-row gap-6 cursor-pointer group hover:bg-slate-300/5 p-2 rounded-lg transition-colors duration-300 hover:border-t-[0.1px] hover:border-slate-200/20"
+              className="flex flex-col md:flex-row gap-6 cursor-pointer group hover:bg-gray-100 p-2 rounded-lg transition-colors duration-300 hover:border-t-[0.1px] hover:border-gray-300"
               onClick={() => setSelectedProject(project)}
             >
               <img
@@ -22,7 +22,7 @@ export function Projects() {
 
               <div className="flex flex-col justify-center">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-normal text-yellow-500 group-hover:text-yellow-400">
+                  <h3 className="text-xl font-normal text-black group-hover:text-black">
                     {project.title}
                   </h3>
 
@@ -33,7 +33,7 @@ export function Projects() {
       e.stopPropagation()
       window.open(project.url, '_blank')
     }}
-    className="mt-1 text-teal-400 hover:text-teal-100 flex items-center gap-2 text-sm font-medium p-2 rounded z-10"
+    className="mt-1 text-blue-700 hover:text-blue-400 flex items-center gap-2 text-sm font-medium p-2 rounded z-10"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ export function Projects() {
 
                 </div>
 
-                <p className="text-slate-400 mt-2 text-sm">
+                <p className="text-black mt-2 text-sm">
                   {project.description}
                 </p>
 
@@ -62,7 +62,7 @@ export function Projects() {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="bg-teal-800 text-teal-400 text-xs px-2 py-1 rounded-full"
+                      className="bg-gray-200 text-black text-xs px-2 py-1 rounded-full"
                     >
                       {tech}
                     </span>

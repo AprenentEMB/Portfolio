@@ -1,16 +1,16 @@
-export function About() {
+export function About({id}) {
   return (
-    <section className="my-4 mt-8" id="about">
-      <p className="text-md text-slate-400 tracking-wide font-light pt-16">
+    <section id={id} className="my-4 mt-8">
+      <p className="text-md text-black tracking-wide font-light pt-16 text-pretty text-justify">
         I'm Enric Moles, a front-end developer based in Barcelona, passionate
         about building
-        <span className="text-slate-300">
+        <span className="text-black">
           {' '}
           modern, accessible, and functional user interfaces.
         </span>
       </p>
 
-      <p className="text-md text-slate-400 tracking-wide font-light mt-4">
+      <p className="text-md text-black tracking-wide font-light mt-4 text-pretty text-justify">
         I started learning to code on my own, completing{' '}
         <strong>freeCodeCamp</strong> certifications and diving into{' '}
         <strong>React</strong> and <strong>Node.js</strong> through{' '}
@@ -18,28 +18,28 @@ export function About() {
         like e-commerce websites and portfolio pages.
       </p>
 
-      <p className="text-md text-slate-400 tracking-wide font-light mt-4">
+      <p className="text-md text-black tracking-wide font-light mt-4 text-pretty text-justify">
         I currently work with{' '}
-        <span className="text-slate-300">
+        <span className="text-black">
           React (Vite), JavaScript/TypeScript, TailwindCSS, Zustand, TanStack
           Router & Query, Astro, and Strapi
         </span>
         , and am learning back-end basics with{' '}
-        <span className="text-slate-300">Node.js, Express, and Supabase</span>{' '}
+        <span className="text-black">Node.js, Express, and Supabase</span>{' '}
         to strengthen my full-stack skills.
       </p>
 
-      <p className="text-md text-slate-400 tracking-wide font-light mt-4">
+      <p className="text-md text-black tracking-wide font-light mt-4 text-pretty text-justify">
         I'm currently working part-time at <strong>SkillGap</strong>,
         contributing to a variety of projects and areas, including building and
         maintaining internal tools, web applications, and other initiatives
-        using <span className="text-slate-300">React, Node.js, Firebase</span>.
+        using <span className="text-black">React, Node.js, Firebase</span>.
         This role allows me to collaborate with experienced developers, learn
         best practices in real-world projects, and improve my problem-solving
         and project management skills.
       </p>
 
-      <p className="text-md text-slate-400 tracking-wide font-light mt-4">
+      <p className="text-md text-black tracking-wide font-light mt-4 text-pretty text-justify">
         My background in <strong>music production</strong> and as a{' '}
         <strong>sound technician</strong> influences my attention to detail,
         creativity, and structured thinking in coding. Outside of development, I
@@ -51,10 +51,10 @@ export function About() {
   )
 }
 
-export function InProgress() {
+export function InProgress({id}) {
   return (
-    <section className="mt-4 mb-24" id="in-progress">
-      <div className="text-slate-400 text-md tracking-wide font-light space-y-4">
+    <section id={id} className="mt-4 mb-24">
+      <div className="text-black text-md tracking-wide font-light space-y-4">
         <p>
           I’m currently focused on building and refining{' '}
           <strong>MyHabits</strong> — a habit tracking application designed to
@@ -70,7 +70,7 @@ export function InProgress() {
         </p>
 
         <div className="border-l-4 border-emerald-400 pl-4 mt-6">
-          <h3 className="text-xl font-semibold text-slate-300 mb-1">
+          <h3 className="text-xl font-semibold mb-1">
             🚧 Main focus: MyHabits App
           </h3>
 

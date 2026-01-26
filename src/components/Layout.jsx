@@ -10,30 +10,43 @@ const navigate = useNavigate()
 const [activeSection, setActiveSection] = useState(null)
 
 
-// Efecte per observar les seccions i actualitzar activeSection
 useEffect(() => {
-  const ids = ['about', 'projects', 'in-progress']
-  const sections = ids.map(id => document.getElementById(id)).filter(Boolean)
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        setActiveSection(entry.target.id)
-      }
-    })
-  }, {
-    rootMargin: '-70% 0px -70% 0px' // ajusta segons el teu header
-  })
+  const sections = ['about', 'projects', 'in-progress'];
 
-  sections.forEach(section => {
-    observer.observe(section)
-  })
+  const handleScroll = () => {
+    const windowCenter = window.innerHeight / 2;
+    let currentSection = null;
+
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      const rect = el.getBoundingClientRect();
+
+      // Si el center de la finestra està dins de la secció, aquesta és activa
+      if (rect.top <= windowCenter && rect.bottom >= windowCenter) {
+        currentSection = id;
+      }
+    });
+
+    if (currentSection && currentSection !== activeSection) {
+      setActiveSection(currentSection);
+    }
+  };
+
+  // Executa al muntatge per assegurar-se que la secció inicial està detectada
+  handleScroll();
+
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('resize', handleScroll);
 
   return () => {
-    sections.forEach(section => {
-      observer.unobserve(section)
-    })
-  }
-}, [])
+    window.removeEventListener('scroll', handleScroll);
+    window.removeEventListener('resize', handleScroll);
+  };
+}, [activeSection]);
+
+
 
 
   function handleAboutClick(e) {
@@ -67,24 +80,24 @@ useEffect(() => {
   }
 
   return (
-    <div className="flex flex-col lg:flex-row bg-gradient-to-br from-black via-(--color-midnight) to-zinc-900">
+    <div className="flex flex-col lg:flex-row bg-white">
 
 
 
-      <div className="pl-[11%] text-slate-400 p-6 flex flex-col justify-between lg:fixed lg:left-0 lg:top-0 lg:h-screen z-20">
+      <div className="pl-[11%] text-black p-6 flex flex-col justify-between lg:fixed lg:left-0 lg:top-0 lg:h-screen z-20">
 
 
         <div>
-          <h1 className="text-5xl text-slate-300 font-semibold mb-2 pt-20">Enric Moles</h1>
-          <p className="mb-6 text-yellow-500/80 text-xl">Full Stack Developer</p>
-          <p className="mb-6 text-slate-400 text-l font-light w-2/3">Focused on crafting accessible, responsive and modern web experiences.</p>
-          <nav className="hidden sm:fixed sm:flex flex-col space-y-3 mt-16 text-xs">
+          <h1 className="text-5xl text-black font-semibold mb-2 pt-20">Enric Moles</h1>
+          <p className="mb-6 text-black text-xl">Full Stack Developer</p>
+          <p className="mb-6 text-black text-l font-light w-2/3">Focused on crafting accessible, responsive and modern web experiences.</p>
+          <nav className="hidden lg:fixed lg:flex flex-col space-y-3 mt-16 text-xs">
             <div className="flex flex-row space-x-4 mt-2">
                 
             <Link
               to="/about"
                 onClick={handleAboutClick}
-              className={`transition-all font-medium duration-300 flex flex-row items-center group ${activeSection === 'about' ? 'text-yellow-400' : 'hover:text-yellow-400'}`}
+              className={`transition-all font-medium duration-300 flex flex-row items-center group ${activeSection === 'about' ? 'text-black' : 'hover:text-black'}`}
               
             >
                 <div className= {`${activeSection === 'about' ? 'custom-line custom-line-active' : 'custom-line'}`}></div>
@@ -95,7 +108,7 @@ useEffect(() => {
             <Link
               to="/projects"
                 onClick={handleProjectsClick}
-              className={`transition-all font-medium duration-300 flex flex-row items-center group ${activeSection === 'projects' ? 'text-yellow-400' : 'hover:text-yellow-400'}`}
+              className={`transition-all font-medium duration-300 flex flex-row items-center group ${activeSection === 'projects' ? 'text-black' : 'hover:text-black'}`}
 
             >
                 <div className= {`${activeSection === 'projects' ? 'custom-line custom-line-active' : 'custom-line'}`}></div>
@@ -107,7 +120,7 @@ useEffect(() => {
             <Link
               to="/in-progress"
                 onClick={handleInProgressClick}
-              className={`transition-all font-medium duration-300 flex flex-row items-center group ${activeSection === 'in-progress' ? 'text-yellow-400' : 'hover:text-yellow-400'}`}
+              className={`transition-all font-medium duration-300 flex flex-row items-center group ${activeSection === 'in-progress' ? 'text-black' : 'hover:text-black'}`}
 
             >
                <div className= {`${activeSection === 'in-progress' ? 'custom-line custom-line-active' : 'custom-line'}`}></div>
@@ -144,9 +157,9 @@ useEffect(() => {
   {/* Main content */}
   <main className="flex flex-col">
     <div className="px-2">
-      <About />
-      <Projects />
-      <InProgress />
+      <About id="about" />
+      <Projects id="projects" />
+      <InProgress id="in-progress" />
     </div>
   </main>
 </div>

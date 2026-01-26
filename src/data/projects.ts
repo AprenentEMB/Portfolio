@@ -1,7 +1,7 @@
 const projects = [
   {
     id: 1,
-    title: 'Ascendra',
+    title: 'Ascendra (In Progress)',
     description: 'An e-commerce platform for skincare products (in progress).',
     url: 'https://ascendra-zeta.vercel.app/es',
     fullDescription:
