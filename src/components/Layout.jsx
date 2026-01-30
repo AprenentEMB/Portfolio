@@ -1,6 +1,6 @@
 import {  Link, useNavigate } from '@tanstack/react-router'
 import { useEffect, useState} from 'react'
-import { About, InProgress } from './About&Skills'
+import { About, InProgress } from './AboutAndSkills'
 import { Projects } from './Projects'
 
 
@@ -80,7 +80,8 @@ useEffect(() => {
   }
 
   return (
-    <div className="flex flex-col lg:flex-row bg-white">
+    <div className="flex flex-col lg:flex-row bg-white
+">
 
 
 
@@ -89,7 +90,7 @@ useEffect(() => {
 
         <div>
           <h1 className="text-5xl text-black font-semibold mb-2 pt-20">Enric Moles</h1>
-          <p className="mb-6 text-black text-xl">Full Stack Developer</p>
+          <p className="mb-6 text-blue-800 text-xl font-normal">- Full Stack Developer</p>
           <p className="mb-6 text-black text-l font-light w-2/3">Focused on crafting accessible, responsive and modern web experiences.</p>
           <nav className="hidden lg:fixed lg:flex flex-col space-y-3 mt-16 text-xs">
             <div className="flex flex-row space-x-4 mt-2">

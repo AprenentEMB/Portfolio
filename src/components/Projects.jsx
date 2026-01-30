@@ -1,17 +1,38 @@
-import { useState } from 'react'
-import { ProjectModal } from './ProjectModal'
-import projects from '../data/projects'
+import { useState } from 'react';
+import { ProjectModal } from './ProjectModal';
+import projects from '../data/projects';
+import {
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiTypescript,
+  SiStrapi,
+  SiAstro,
+  SiVite,
+  SiI18Next,
+} from 'react-icons/si';
 
-export function Projects({id}) {
-  const [selectedProject, setSelectedProject] = useState(null)
+export function Projects({ id }) {
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const techIcons = {
+    React: SiReact,
+    Nextjs: SiNextdotjs,
+    TailwindCSS: SiTailwindcss,
+    TypeScript: SiTypescript,
+    Strapi: SiStrapi,
+    Astro: SiAstro,
+    Vite: SiVite,
+    i18n: SiI18Next  
+  };
 
   return (
     <section id={id} className="py-20">
       <div className="flex flex-col gap-12 my-8 h-[40%]">
-        {projects.map((project) => (
+        {projects.map(project => (
           <div key={project.id}>
             <div
-              className="flex flex-col md:flex-row gap-6 cursor-pointer group hover:bg-gray-100 p-2 rounded-lg transition-colors duration-300 hover:border-t-[0.1px] hover:border-gray-300"
+              className="flex flex-col md:flex-row gap-6 group hover:bg-gray-100 p-2 rounded-lg transition-colors duration-300 hover:border-t-[0.1px] hover:border-gray-300"
               onClick={() => setSelectedProject(project)}
             >
               <img
@@ -26,47 +47,47 @@ export function Projects({id}) {
                     {project.title}
                   </h3>
 
-                  
-{project.url && (
-  <button
-    onClick={(e) => {
-      e.stopPropagation()
-      window.open(project.url, '_blank')
-    }}
-    className="mt-1 text-blue-700 hover:text-blue-400 flex items-center gap-2 text-sm font-medium p-2 rounded z-10"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth="1.2"
-      stroke="currentColor"
-      className="w-6 h-6"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-      />
-    </svg>
-  </button>
-)}
-
+                  {project.url && (
+                    <button
+                      onClick={e => {
+                        e.stopPropagation();
+                        window.open(project.url, '_blank');
+                      }}
+                      className="mt-1 text-blue-700 hover:text-blue-400 flex items-center gap-2 text-sm font-medium p-2 rounded z-10"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth="1.2"
+                        stroke="currentColor"
+                        className="w-6 h-6"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                        />
+                      </svg>
+                    </button>
+                  )}
                 </div>
 
-                <p className="text-black mt-2 text-sm">
-                  {project.description}
-                </p>
+                <p className="text-black mt-2 text-sm">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2 mt-4">
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="bg-gray-200 text-black text-xs px-2 py-1 rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                  {project.technologies.map(tech => {
+                    const Icon = techIcons[tech];
+                    return (
+                      <span
+                        key={tech}
+                        className="flex items-center gap-1 bg-blue-800 text-white text-xs px-2 py-1 rounded-full"
+                      >
+                        {Icon && <Icon className="w-4 h-4" />}
+                        {tech}
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -81,5 +102,5 @@ export function Projects({id}) {
         />
       )}
     </section>
-  )
+  );
 }

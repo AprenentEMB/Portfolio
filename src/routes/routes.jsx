@@ -1,6 +1,6 @@
 
 import { RouterProvider, createRouter, Route, Outlet, Link } from '@tanstack/react-router'
-import { About} from '../components/About&Skills.jsx'
+import { About} from '../components/AboutAndSkills.jsx'
 import { Contact } from '../components/Contact.jsx'
 import { Projects } from '../components/Projects.jsx'
 import { Layout as RootLayout } from '../components/Layout.jsx'

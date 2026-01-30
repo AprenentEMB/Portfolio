@@ -42,7 +42,7 @@ const projects = [
       '/images/biel-4.png',
       '/images/biel-5.png',
     ],
-    technologies: ['Astro', 'TypeScript', 'TailwindCSS', 'Drone FPV'],
+    technologies: ['Astro', 'TypeScript', 'TailwindCSS'],
   },
   {
     id: 3,
@@ -66,7 +66,6 @@ const projects = [
       'Vite',
       'TailwindCSS',
       'Zustand',
-      'Framer Motion',
       'i18n',
     ],
   },
