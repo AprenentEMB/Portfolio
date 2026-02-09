@@ -28,51 +28,50 @@ const projects = [
   },
   {
     id: 2,
-    title: 'BielRaspall FPV',
+    title: 'Isaac Fluxà Portfolio',
     description:
-      "A portfolio website showcasing Biel Raspall's drone projects and aerial footage.",
-    url: 'https://bielportf.vercel.app/',
+      "A minimalist portfolio showcasing Isaac Fluxà's film direction and visual storytelling work.",
+    url: 'https://isaac-flux.vercel.app/',
     fullDescription:
-      'This project is a personal portfolio for Biel Raspall, a drone pilot and technology enthusiast. Built to showcase drone videos, photography, and technical projects. Highlights skills in aerial cinematography, web development with Astro, and responsive design using TailwindCSS.',
-    thumbnail: '/images/biel-thumb.png',
+      'This project is a personal portfolio for Isaac Fluxà, a film director and visual storyteller. Designed with a minimalist and elegant aesthetic, the website focuses on strong visual angles and imagery to present his audiovisual projects, cinematic work, and creative vision. Built with Astro and TailwindCSS, emphasizing clarity, rhythm, and visual impact.',
+    thumbnail: '/images/isaac-thumb.png',
     images: [
-      '/images/biel-1.png',
-      '/images/biel-2.png',
-      '/images/biel-3.png',
-      '/images/biel-4.png',
-      '/images/biel-5.png',
+      '/images/isaac-1.png',
+      '/images/isaac-2.png',
+      '/images/isaac-3.png',
+      '/images/isaac-4.png',
     ],
     technologies: ['Astro', 'TypeScript', 'TailwindCSS'],
   },
   {
-  id: 3,
-  title: 'WeekMePro',
-  description:
-    'Design your weekly schedule for free, no account required. Create an account to save your weekly planners. Optional donations are available via Buy Me a Coffee.',
-  url: 'https://www.weekmepro.com',
-  fullDescription:
-    'WeekMePro is a powerful and intuitive weekly planner that lets you design your weekly schedule for free, without needing an account. Users can optionally create an account to save and manage their weekly planners in the cloud. The app is completely free to use, and for those who wish to support its development, optional donations are available through Buy Me a Coffee, securely processed via Stripe. Additional features include a visual schedule editor, undo/redo actions, PDF export, multilingual support, and extensive customization options for fonts and colors.',
-  thumbnail: '/images/myweek-thumb.png',
-  images: [
-    '/images/myweek-1.png',
-    '/images/myweek-2.png',
-    '/images/myweek-3.png',
-    '/images/myweek-4.png',
-    '/images/myweek-5.png',
-    '/images/myweek-6.png',
-  ],
-  technologies: [
-    'React',
-    'TypeScript',
-    'Vite',
-    'TailwindCSS',
-    'Zustand',
-    'i18n',
-    'Firebase',
-    'Stripe',
-  ],
-},
+    id: 3,
+    title: 'WeekMePro',
+    description:
+      'A SaaS web application created to help users design their own personalized weekly schedule. The app focuses on simplicity and usability, allowing users to create planners freely and save them by signing up.',
 
-]
+    url: 'https://www.weekmepro.com',
+    fullDescription:
+      'WeekMePro is a powerful and intuitive weekly planner that lets you design your weekly schedule for free, without needing an account. Users can optionally create an account to save and manage their weekly planners in the cloud. The app is completely free to use, and for those who wish to support its development, optional donations are available through Buy Me a Coffee, securely processed via Stripe. Additional features include a visual schedule editor, undo/redo actions, PDF export, multilingual support, and extensive customization options for fonts and colors.',
+    thumbnail: '/images/myweek-thumb.png',
+    images: [
+      '/images/myweek-1.png',
+      '/images/myweek-2.png',
+      '/images/myweek-3.png',
+      '/images/myweek-4.png',
+      '/images/myweek-5.png',
+      '/images/myweek-6.png',
+    ],
+    technologies: [
+      'React',
+      'TypeScript',
+      'Vite',
+      'TailwindCSS',
+      'Zustand',
+      'i18n',
+      'Firebase',
+      'Stripe',
+    ],
+  },
+];
 
-export default projects
+export default projects;
