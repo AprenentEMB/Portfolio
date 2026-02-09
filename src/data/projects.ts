@@ -45,30 +45,34 @@ const projects = [
     technologies: ['Astro', 'TypeScript', 'TailwindCSS'],
   },
   {
-    id: 3,
-    title: 'WeekMePro',
-    description: 'A weekly planner app to fully customize your schedule.',
-    url: 'https://www.weekmepro.com',
-    fullDescription:
-      'WeekMePro is a comprehensive weekly planner that lets users visually organize their schedules. Features include time slot management, undo/redo, PDF export, localization support, and customization options for fonts and colors.',
-    thumbnail: '/images/myweek-thumb.png',
-    images: [
-      '/images/myweek-1.png',
-      '/images/myweek-2.png',
-      '/images/myweek-3.png',
-      '/images/myweek-4.png',
-      '/images/myweek-5.png',
-      '/images/myweek-6.png',
-    ],
-    technologies: [
-      'React',
-      'TypeScript',
-      'Vite',
-      'TailwindCSS',
-      'Zustand',
-      'i18n',
-    ],
-  },
+  id: 3,
+  title: 'WeekMePro',
+  description:
+    'Design your weekly schedule for free, no account required. Create an account to save your weekly planners. Optional donations are available via Buy Me a Coffee.',
+  url: 'https://www.weekmepro.com',
+  fullDescription:
+    'WeekMePro is a powerful and intuitive weekly planner that lets you design your weekly schedule for free, without needing an account. Users can optionally create an account to save and manage their weekly planners in the cloud. The app is completely free to use, and for those who wish to support its development, optional donations are available through Buy Me a Coffee, securely processed via Stripe. Additional features include a visual schedule editor, undo/redo actions, PDF export, multilingual support, and extensive customization options for fonts and colors.',
+  thumbnail: '/images/myweek-thumb.png',
+  images: [
+    '/images/myweek-1.png',
+    '/images/myweek-2.png',
+    '/images/myweek-3.png',
+    '/images/myweek-4.png',
+    '/images/myweek-5.png',
+    '/images/myweek-6.png',
+  ],
+  technologies: [
+    'React',
+    'TypeScript',
+    'Vite',
+    'TailwindCSS',
+    'Zustand',
+    'i18n',
+    'Firebase',
+    'Stripe',
+  ],
+},
+
 ]
 
 export default projects
