@@ -1,11 +1,11 @@
 const projects = [
   {
     id: 1,
-    title: 'Ascendra (In Progress)',
-    description: 'An e-commerce platform for skincare products (in progress).',
-    url: 'https://ascendra-zeta.vercel.app/es',
+    title: 'Ascendra',
+    description: 'An e-commerce platform for skincare products.',
+    url: 'https://ascendra-affiliate.vercel.app/',
     fullDescription:
-      'Ascendra is a modern e-commerce web application focused on skincare. Users can browse products, filter by category and popularity, create accounts, and manage favorites. Backend integration and checkout system are currently under development.',
+      'Ascendra is a modern e-commerce web application focused on skincare. Users can browse products, filter by category, and manage favorites. The products are linked to Amazon through affiliate links, allowing users to purchase directly from Amazon while supporting the site. Built with React, Next.js, TailwindCSS, and TypeScript, Ascendra emphasizes a clean design and smooth user experience.',
     thumbnail: '/images/ascendra-thumb.png',
     images: [
       '/images/ascendra-1.png',
@@ -19,11 +19,10 @@ const projects = [
     ],
     technologies: [
       'React',
-      'Nextjs',
+      'Next.js',
       'TailwindCSS',
       'TypeScript',
       'Zustand',
-      'Strapi',
     ],
   },
   {

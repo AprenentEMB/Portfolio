@@ -11,7 +11,7 @@ import {
   SiVite,
   SiI18Next,
   SiFirebase,
-  SiStripe
+  SiStripe,
 } from 'react-icons/si';
 
 export function Projects({ id }) {
@@ -27,7 +27,7 @@ export function Projects({ id }) {
     Vite: SiVite,
     i18n: SiI18Next,
     Firebase: SiFirebase,
-    Stripe: SiStripe
+    Stripe: SiStripe,
   };
 
   return (
