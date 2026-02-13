@@ -75,8 +75,13 @@ export function Layout() {
 
   return (
     <div
-      className="flex flex-col lg:flex-row bg-white
-"
+      className="flex flex-col lg:flex-row bg-gradient-to-br from-white to-zinc-200"
+      style={{
+        opacity:1,
+        zIndex: -1,
+        backgroundImage:
+          'repeating-radial-gradient( circle at 0 0, transparent 0, #f5f5f5 14px ), repeating-linear-gradient( #e8e8e855, #e8e8e8 ), opacity(0.8)',
+      }}
     >
       <div className="pl-[11%] text-black p-6 flex flex-col justify-between lg:fixed lg:left-0 lg:top-0 lg:h-screen z-20">
         <div>
