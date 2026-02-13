@@ -83,15 +83,15 @@ export function Layout() {
           'repeating-radial-gradient( circle at 0 0, transparent 0, #f5f5f5 14px ), repeating-linear-gradient( #e8e8e855, #e8e8e8 )',
       }}
     >
-      <div className="pl-[11%] text-black p-6 flex flex-col justify-between lg:fixed lg:left-0 lg:top-0 lg:h-screen z-20">
+      <div className="pl-[11%] text-black p-6 flex flex-col justify-between lg:fixed lg:left-0 lg:top-0 lg:h-screen z-20 animate-pageFade delay-1">
         <div>
-          <h1 className="text-5xl text-black font-semibold mb-2 pt-20">
+          <h1 className="text-5xl text-black font-light mb-2 pt-20">
             Enric Moles
           </h1>
-          <p className="mb-6 text-blue-800 text-xl font-normal">
+          <p className="mb-6 text-slate-800/70 text-xl font-normal">
             - Full Stack Developer
           </p>
-          <p className="mb-6 text-black text-l font-light w-2/3">
+          <p className="mb-6 text-black/80 text-l font-light w-2/3">
             Focused on crafting accessible, responsive and modern web
             experiences.
           </p>
@@ -183,13 +183,19 @@ export function Layout() {
           </div>
         </div>
       </div>
-      <div className="pl-[5%] pr-[5%] lg:pl-[48%] lg:pr-[10%]">
+      <div className="pl-[5%] pr-[5%] lg:pl-[48%] lg:pr-[10%] animate-pageFade delay-2">
         {/* Main content */}
         <main className="flex flex-col">
           <div className="px-2">
-            <About id="about" />
-            <Projects id="projects" />
-            <InProgress id="in-progress" />
+            <div className="animate-pageFade delay-3">
+              <About id="about" />
+            </div>
+            <div className="animate-pageFade delay-4">
+              <Projects id="projects" />
+            </div>
+            <div className="animate-pageFade delay-5">
+              <InProgress id="in-progress" />
+            </div>
           </div>
         </main>
       </div>
