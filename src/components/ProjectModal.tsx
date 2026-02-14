@@ -22,11 +22,11 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
   const modalContent = (
     <div
       onClick={onClose}
-      className="fixed inset-0 bg-white/85 z-50 flex justify-center items-center cursor-pointer animate-fadeIn"
+      className="fixed inset-0 bg-white/85 z-50 flex justify-center items-start sm:items-center p-4 sm:p-6 cursor-pointer animate-fadeIn"
     >
       <div
         onClick={e => e.stopPropagation()}
-        className="bg-white/30 backdrop-blur-3xl border border-white/30 p-6 rounded-lg max-w-4xl w-full relative animate-scaleIn cursor-auto z-10 shadow-2xl transition-all duration-300 text-black"
+        className="bg-white/30 backdrop-blur-3xl border border-white/30 p-4 sm:p-6 rounded-lg max-w-4xl w-[92vw] sm:w-full relative animate-scaleIn cursor-auto z-10 shadow-2xl transition-all duration-300 text-black max-h-[90vh] overflow-hidden"
       >
         <button
           onClick={onClose}
@@ -35,53 +35,55 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           &times;
         </button>
 
-        <h3 className="text-2xl font-semibold mb-4 text-black/90">
-          {project.title}
-        </h3>
+        <div className="flex flex-col gap-4 overflow-y-auto pr-1 max-h-[90vh]">
+          <h3 className="text-2xl font-semibold text-black/90">
+            {project.title}
+          </h3>
 
-        <div className="modal-scroll overflow-x-auto max-w-full pb-2">
-          <div className="flex gap-4 w-max pr-1">
-            {project.images.map((img, idx) => {
-              const isLoaded = loadedImages[idx];
+          <div className="modal-scroll overflow-x-auto max-w-full pb-2">
+            <div className="flex gap-4 w-max pr-1">
+              {project.images.map((img, idx) => {
+                const isLoaded = loadedImages[idx];
 
-              return (
-                <div
-                  key={idx}
-                  className="relative max-h-[500px] rounded shadow-lg bg-white/40 flex-shrink-0"
-                >
-                  {!isLoaded && (
-                    <div className="w-[320px] h-[220px] sm:w-[420px] sm:h-[280px] md:w-[520px] md:h-[340px] animate-pulse bg-black/10 rounded" />
-                  )}
-                  <img
-                    src={img}
-                    alt={`Screenshot ${idx + 1}`}
-                    onLoad={() =>
-                      setLoadedImages(prev => {
-                        const next = [...prev];
-                        next[idx] = true;
-                        return next;
-                      })
-                    }
-                    onError={() =>
-                      setLoadedImages(prev => {
-                        const next = [...prev];
-                        next[idx] = true;
-                        return next;
-                      })
-                    }
-                    className={`max-h-[500px] w-auto rounded object-contain flex-shrink-0 transition-opacity duration-300 ${
-                      isLoaded ? 'opacity-100' : 'opacity-0 absolute inset-0'
-                    }`}
-                  />
-                </div>
-              );
-            })}
+                return (
+                  <div
+                    key={idx}
+                    className="relative max-h-[60vh] sm:max-h-[500px] rounded shadow-lg bg-white/40 flex-shrink-0 flex items-center justify-center"
+                  >
+                    {!isLoaded && (
+                      <div className="w-[80vw] h-[45vw] max-w-[520px] max-h-[60vh] sm:max-h-[340px] sm:w-[420px] sm:h-[280px] md:w-[520px] md:h-[340px] animate-pulse bg-black/10 rounded" />
+                    )}
+                    <img
+                      src={img}
+                      alt={`Screenshot ${idx + 1}`}
+                      onLoad={() =>
+                        setLoadedImages(prev => {
+                          const next = [...prev];
+                          next[idx] = true;
+                          return next;
+                        })
+                      }
+                      onError={() =>
+                        setLoadedImages(prev => {
+                          const next = [...prev];
+                          next[idx] = true;
+                          return next;
+                        })
+                      }
+                      className={`max-h-[60vh] sm:max-h-[500px] max-w-[80vw] sm:max-w-[520px] w-auto h-auto rounded object-contain flex-shrink-0 transition-opacity duration-300 ${
+                        isLoaded ? 'opacity-100' : 'opacity-0 absolute inset-0'
+                      }`}
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
 
-        <p className="text-black/90 mt-4 bg-white/70 border border-white/40 rounded-md px-4 py-3">
-          {project.fullDescription}
-        </p>
+          <p className="text-black/90 bg-white/70 border border-white/40 rounded-md px-4 py-3">
+            {project.fullDescription}
+          </p>
+        </div>
       </div>
     </div>
   );
