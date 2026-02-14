@@ -57,7 +57,7 @@ export function Projects({ id }) {
                         e.stopPropagation();
                         window.open(project.url, '_blank');
                       }}
-                      className="mt-1 text-blue-700 hover:text-blue-400 flex items-center gap-2 text-sm font-medium p-2 rounded z-10"
+                      className="mt-1 text-blue-700 hover:text-blue-400 flex items-center gap-2 text-sm font-medium p-2 rounded"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
