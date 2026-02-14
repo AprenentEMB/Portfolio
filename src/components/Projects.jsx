@@ -36,13 +36,13 @@ export function Projects({ id }) {
         {projects.map(project => (
           <div key={project.id}>
             <div
-              className="flex flex-col md:flex-row gap-6 group hover:bg-gray-100 p-2 rounded-lg transition-colors duration-300 hover:border-t-[0.1px] hover:border-gray-300"
+              className="flex flex-col md:flex-row gap-6 group hover:bg-gray-200 p-2 rounded-lg transition-colors duration-300 hover:border-gray-500"
               onClick={() => setSelectedProject(project)}
             >
               <img
                 src={project.thumbnail}
                 alt={project.title}
-                className="w-full md:w-1/2 rounded-lg shadow-md group-hover:scale-[1.02] transition-transform duration-300 object-contain aspect-video"
+                className="w-full md:w-1/2 rounded-lg group-hover:scale-[1.02] transition-transform duration-300 object-contain aspect-video"
               />
 
               <div className="flex flex-col justify-center">
