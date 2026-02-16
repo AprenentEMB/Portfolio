@@ -1,10 +1,8 @@
-import { Link, useNavigate } from '@tanstack/react-router';
 import { useEffect, useState } from 'react';
 import { About, InProgress } from './AboutAndSkills';
 import { Projects } from './Projects';
 
 export function Layout() {
-  const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState(null);
 
   useEffect(() => {
@@ -45,45 +43,54 @@ export function Layout() {
 
   function handleAboutClick(e) {
     e.preventDefault();
-    navigate({ to: '/about' });
     setActiveSection('about');
     setTimeout(() => {
       const el = document.getElementById('about');
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 100);
   }
 
   function handleProjectsClick(e) {
     e.preventDefault();
-    navigate({ to: '/projects' });
     setActiveSection('projects');
     setTimeout(() => {
       const el = document.getElementById('projects');
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 100);
   }
 
   function handleInProgressClick(e) {
     e.preventDefault();
-    navigate({ to: '/in-progress' });
     setActiveSection('in-progress');
     setTimeout(() => {
       const el = document.getElementById('in-progress');
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 100);
   }
 
   return (
     <div
-      className="flex flex-col lg:flex-row bg-gradient-to-br from-white to-zinc-200"
-      style={{
-        opacity: 1,
-        zIndex: 0,
-        backgroundImage:
-          'repeating-radial-gradient( circle at 0 0, transparent 0, #f5f5f5 14px ), repeating-linear-gradient( #e8e8e855, #e8e8e8 )',
-      }}
+      className="relative overflow-hidden flex flex-col lg:flex-row bg-gradient-to-br from-slate-100 via-white to-zinc-300"
     >
-      <div className="pl-[11%] text-black p-6 flex flex-col justify-between lg:fixed lg:left-0 lg:top-0 lg:h-screen animate-pageFade delay-1">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-0"
+        style={{
+          backgroundImage: "url('/bg.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: 0.48,
+          WebkitMaskImage:
+            'linear-gradient(135deg, transparent 0%, black 25%, black 100%)',
+          maskImage:
+            'linear-gradient(135deg, transparent 0%, black 25%, black 100%)',
+          WebkitMaskSize: '200% 200%',
+          maskSize: '200% 200%',
+          WebkitMaskPosition: '0% 0%',
+          maskPosition: '0% 0%',
+        }}
+      />
+      <div className="relative z-10 pl-[11%] text-black p-6 flex flex-col justify-between lg:fixed lg:left-0 lg:top-0 lg:h-screen z-20 animate-pageFade delay-1">
         <div>
           <h1 className="text-5xl text-black font-light mb-2 pt-20">
             Enric Moles
@@ -95,12 +102,12 @@ export function Layout() {
             Focused on crafting accessible, responsive and modern web
             experiences.
           </p>
-          <nav className="hidden lg:fixed lg:flex flex-col space-y-3 mt-16 text-xs">
+          <nav className="hidden lg:fixed lg:flex flex-col space-y-3 mt-16 text-xs z-30">
             <div className="flex flex-row space-x-4 mt-2">
-              <Link
-                to="/about"
+              <a
+                href="#about"
                 onClick={handleAboutClick}
-                className={`transition-all font-medium duration-300 flex flex-row items-center group ${activeSection === 'about' ? 'text-black' : 'hover:text-black'}`}
+                className={`transition-all font-medium duration-300 flex flex-row items-center group w-full py-2 pr-4 ${activeSection === 'about' ? 'text-black' : 'hover:text-black'}`}
               >
                 <div
                   className={`${activeSection === 'about' ? 'custom-line custom-line-active' : 'custom-line'}`}
@@ -108,13 +115,13 @@ export function Layout() {
                 <span className="transition-all duration-300 group-hover:ml-4">
                   ABOUT
                 </span>
-              </Link>
+              </a>
             </div>
             <div className="flex flex-row space-x-4 mt-2">
-              <Link
-                to="/projects"
+              <a
+                href="#projects"
                 onClick={handleProjectsClick}
-                className={`transition-all font-medium duration-300 flex flex-row items-center group ${activeSection === 'projects' ? 'text-black' : 'hover:text-black'}`}
+                className={`transition-all font-medium duration-300 flex flex-row items-center group w-full py-2 pr-4 ${activeSection === 'projects' ? 'text-black' : 'hover:text-black'}`}
               >
                 <div
                   className={`${activeSection === 'projects' ? 'custom-line custom-line-active' : 'custom-line'}`}
@@ -122,14 +129,14 @@ export function Layout() {
                 <span className="transition-all duration-300 group-hover:ml-4">
                   PROJECTS
                 </span>
-              </Link>
+              </a>
             </div>
 
             <div className="flex flex-row space-x-4 mt-2">
-              <Link
-                to="/in-progress"
+              <a
+                href="#in-progress"
                 onClick={handleInProgressClick}
-                className={`transition-all font-medium duration-300 flex flex-row items-center group ${activeSection === 'in-progress' ? 'text-black' : 'hover:text-black'}`}
+                className={`transition-all font-medium duration-300 flex flex-row items-center group w-full py-2 pr-4 ${activeSection === 'in-progress' ? 'text-black' : 'hover:text-black'}`}
               >
                 <div
                   className={`${activeSection === 'in-progress' ? 'custom-line custom-line-active' : 'custom-line'}`}
@@ -137,7 +144,7 @@ export function Layout() {
                 <span className="transition-all duration-300 group-hover:ml-4">
                   IN PROGRESS
                 </span>
-              </Link>
+              </a>
             </div>
           </nav>
           <div className="flex flex-row space-x-6 mt-10">
@@ -183,7 +190,7 @@ export function Layout() {
           </div>
         </div>
       </div>
-      <div className="pl-[5%] pr-[5%] lg:pl-[48%] lg:pr-[10%] animate-pageFade delay-2">
+      <div className="relative z-10 pl-[5%] pr-[5%] lg:pl-[48%] lg:pr-[10%] animate-pageFade delay-2">
         {/* Main content */}
         <main className="flex flex-col">
           <div className="px-2">
