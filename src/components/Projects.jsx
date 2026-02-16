@@ -12,7 +12,7 @@ import {
   SiI18Next,
   SiFirebase,
   SiStripe,
-  SiNodejs,
+  SiNodedotjs,
   SiExpress,
   SiMongodb,
 } from 'react-icons/si';
@@ -31,7 +31,7 @@ export function Projects({ id }) {
     i18n: SiI18Next,
     Firebase: SiFirebase,
     Stripe: SiStripe,
-    Nodejs: SiNodejs,
+    Nodejs: SiNodedotjs,
     Express: SiExpress,
     MongoDB: SiMongodb,
   };
