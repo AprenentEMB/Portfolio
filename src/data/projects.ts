@@ -76,7 +76,7 @@ const projects = [
     title: 'Felicita',
     description:
     'A simple and clean app to remember and celebrate important dates with your loved ones.',
-    url: 'https://felicita-app.vercel.app/',
+    url: 'https://felicita-frontend-roan.vercel.app/',
     fullDescription:
       'Felicita is a minimalist web application designed to help users remember and celebrate important dates with their loved ones. The app allows users to create and manage a list of significant dates, such as birthdays, anniversaries, and other special occasions. With a clean and intuitive interface, Felicita focuses on simplicity and ease of use, making it easy for users to stay organized and never miss an important date again.',
     thumbnail: '/images/felicita-thumb.png',
