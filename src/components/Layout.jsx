@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { About, InProgress } from './AboutAndSkills';
 import { Projects } from './Projects';
+import { Footer } from './Footer';
 
 export function Layout() {
   const [activeSection, setActiveSection] = useState(null);
@@ -69,9 +70,7 @@ export function Layout() {
   }
 
   return (
-    <div
-      className="relative overflow-hidden flex flex-col lg:flex-row bg-gradient-to-br from-slate-100 via-white to-zinc-300"
-    >
+    <div className="relative overflow-hidden bg-gradient-to-br from-slate-100 via-white to-zinc-100">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 z-0"
@@ -79,132 +78,139 @@ export function Layout() {
           backgroundImage: "url('/bg.jpg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          opacity: 0.48,
+          opacity: 0.18,
           WebkitMaskImage:
-            'linear-gradient(135deg, transparent 0%, black 25%, black 100%)',
+            'linear-gradient(135deg, transparent 0%, black 35%, black 100%)',
           maskImage:
-            'linear-gradient(135deg, transparent 0%, black 25%, black 100%)',
+            'linear-gradient(135deg, transparent 0%, black 35%, black 100%)',
           WebkitMaskSize: '200% 200%',
           maskSize: '200% 200%',
           WebkitMaskPosition: '0% 0%',
           maskPosition: '0% 0%',
         }}
       />
-      <div className="relative z-10 pl-[11%] text-black p-6 flex flex-col justify-between lg:fixed lg:left-0 lg:top-0 lg:h-screen z-20 animate-pageFade delay-1">
-        <div>
-          <h1 className="text-5xl text-black font-light mb-2 pt-20">
-            Enric Moles
-          </h1>
-          <p className="mb-6 text-slate-800/70 text-xl font-normal">
-            - Full Stack Developer
-          </p>
-          <p className="mb-6 text-black/80 text-l font-light w-2/3">
-            Focused on crafting accessible, responsive and modern web
-            experiences.
-          </p>
-          <nav className="hidden lg:fixed lg:flex flex-col space-y-3 mt-16 text-xs z-30">
-            <div className="flex flex-row space-x-4 mt-2">
-              <a
-                href="#about"
-                onClick={handleAboutClick}
-                className={`transition-all font-medium duration-300 flex flex-row items-center group w-full py-2 pr-4 ${activeSection === 'about' ? 'text-black' : 'hover:text-black'}`}
-              >
-                <div
-                  className={`${activeSection === 'about' ? 'custom-line custom-line-active' : 'custom-line'}`}
-                ></div>
-                <span className="transition-all duration-300 group-hover:ml-4">
-                  ABOUT
-                </span>
-              </a>
-            </div>
-            <div className="flex flex-row space-x-4 mt-2">
-              <a
-                href="#projects"
-                onClick={handleProjectsClick}
-                className={`transition-all font-medium duration-300 flex flex-row items-center group w-full py-2 pr-4 ${activeSection === 'projects' ? 'text-black' : 'hover:text-black'}`}
-              >
-                <div
-                  className={`${activeSection === 'projects' ? 'custom-line custom-line-active' : 'custom-line'}`}
-                ></div>
-                <span className="transition-all duration-300 group-hover:ml-4">
-                  PROJECTS
-                </span>
-              </a>
-            </div>
+      <div className="relative z-10 flex flex-col lg:flex-row">
+        <div className="relative z-10 pl-[11%] text-black p-6 flex flex-col justify-between lg:fixed lg:left-0 lg:top-0 lg:h-screen z-20 animate-pageFade delay-1">
+          <div>
+            <h1 className="text-5xl text-black font-light mb-2 pt-20">
+              Enric Moles
+            </h1>
+            <p className="mb-6 text-slate-800/70 text-xl font-normal">
+              - Full Stack Developer
+            </p>
+            <p className="mb-6 text-black/80 text-l font-light w-2/3">
+              Focused on crafting accessible, responsive and modern web
+              experiences.
+            </p>
+            <nav className="hidden lg:fixed lg:flex flex-col space-y-3 mt-16 text-xs z-30">
+              <div className="flex flex-row space-x-4 mt-2">
+                <a
+                  href="#about"
+                  onClick={handleAboutClick}
+                  className={`transition-all font-medium duration-300 flex flex-row items-center group w-full py-2 pr-4 ${activeSection === 'about' ? 'text-black' : 'hover:text-black'}`}
+                >
+                  <div
+                    className={`${activeSection === 'about' ? 'custom-line custom-line-active' : 'custom-line'}`}
+                  ></div>
+                  <span className="transition-all duration-300 group-hover:ml-4">
+                    ABOUT
+                  </span>
+                </a>
+              </div>
+              <div className="flex flex-row space-x-4 mt-2">
+                <a
+                  href="#projects"
+                  onClick={handleProjectsClick}
+                  className={`transition-all font-medium duration-300 flex flex-row items-center group w-full py-2 pr-4 ${activeSection === 'projects' ? 'text-black' : 'hover:text-black'}`}
+                >
+                  <div
+                    className={`${activeSection === 'projects' ? 'custom-line custom-line-active' : 'custom-line'}`}
+                  ></div>
+                  <span className="transition-all duration-300 group-hover:ml-4">
+                    PROJECTS
+                  </span>
+                </a>
+              </div>
 
-            <div className="flex flex-row space-x-4 mt-2">
-              <a
-                href="#in-progress"
-                onClick={handleInProgressClick}
-                className={`transition-all font-medium duration-300 flex flex-row items-center group w-full py-2 pr-4 ${activeSection === 'in-progress' ? 'text-black' : 'hover:text-black'}`}
-              >
-                <div
-                  className={`${activeSection === 'in-progress' ? 'custom-line custom-line-active' : 'custom-line'}`}
-                ></div>
-                <span className="transition-all duration-300 group-hover:ml-4">
-                  IN PROGRESS
-                </span>
-              </a>
-            </div>
-          </nav>
-          <div className="flex flex-row space-x-6 mt-10">
-            <div className="flex flex-row space-x-4 mt-52 ml-2">
-              {/* GitHub */}
-              <a
-                href="https://github.com/AprenentEMB"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-              >
-                <svg
-                  className="w-6 h-6 hover:text-sky-400 transition-colors"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
+              <div className="flex flex-row space-x-4 mt-2">
+                <a
+                  href="#in-progress"
+                  onClick={handleInProgressClick}
+                  className={`transition-all font-medium duration-300 flex flex-row items-center group w-full py-2 pr-4 ${activeSection === 'in-progress' ? 'text-black' : 'hover:text-black'}`}
                 >
-                  <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.93.58.11.79-.25.79-.56v-2.02c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.45.11-3.02 0 0 .97-.31 3.18 1.18a11.1 11.1 0 012.9-.39c.98.01 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.57.23 2.73.11 3.02.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.7.42.36.8 1.08.8 2.18v3.23c0 .31.21.67.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z" />
-                </svg>
-              </a>
-              {/* LinkedIn */}
-              <a
-                href="https://www.linkedin.com/in/enric-moles-bellveh%C3%AD-7358b024a/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <svg
-                  className="w-6 h-6 hover:text-sky-400 transition-colors"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
+                  <div
+                    className={`${activeSection === 'in-progress' ? 'custom-line custom-line-active' : 'custom-line'}`}
+                  ></div>
+                  <span className="transition-all duration-300 group-hover:ml-4">
+                    IN PROGRESS
+                  </span>
+                </a>
+              </div>
+            </nav>
+            <div className="flex flex-row space-x-6 mt-10">
+              <div className="flex flex-row space-x-4 mt-52 ml-2">
+                {/* GitHub */}
+                <a
+                  href="https://github.com/AprenentEMB"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
                 >
-                  <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.25c-.97 0-1.75-.78-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.25h-3v-5.5c0-1.1-.9-2-2-2s-2 .9-2 2v5.5h-3v-10h3v1.25c.41-.59 1.09-1.25 2.09-1.25 2.28 0 2.91 1.5 2.91 3.44v6.56z" />
-                </svg>
-              </a>
-              {/* Goodreads */}
-              {/*  <a href="https://www.goodreads.com/user/show/00000000-enricmoles" target="_blank" rel="noopener noreferrer" aria-label="Goodreads">
-    <svg className="w-6 h-6 hover:text-sky-400 transition-colors" fill="currentColor" viewBox="0 0 24 24">
-      <text x="2" y="18" fontSize="16" fontFamily="serif">G</text>
-    </svg>
-  </a>
-  */}
+                  <svg
+                    className="w-6 h-6 hover:text-sky-400 transition-colors"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.93.58.11.79-.25.79-.56v-2.02c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.45.11-3.02 0 0 .97-.31 3.18 1.18a11.1 11.1 0 012.9-.39c.98.01 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.57.23 2.73.11 3.02.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.7.42.36.8 1.08.8 2.18v3.23c0 .31.21.67.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z" />
+                  </svg>
+                </a>
+                {/* LinkedIn */}
+                <a
+                  href="https://www.linkedin.com/in/enric-moles-bellveh%C3%AD-7358b024a/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <svg
+                    className="w-6 h-6 hover:text-sky-400 transition-colors"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.25c-.97 0-1.75-.78-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.25h-3v-5.5c0-1.1-.9-2-2-2s-2 .9-2 2v5.5h-3v-10h3v1.25c.41-.59 1.09-1.25 2.09-1.25 2.28 0 2.91 1.5 2.91 3.44v6.56z" />
+                  </svg>
+                </a>
+                {/* Goodreads */}
+                {/*  <a href="https://www.goodreads.com/user/show/00000000-enricmoles" target="_blank" rel="noopener noreferrer" aria-label="Goodreads">
+      <svg className="w-6 h-6 hover:text-sky-400 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+        <text x="2" y="18" fontSize="16" fontFamily="serif">G</text>
+      </svg>
+    </a>
+    */}
+              </div>
             </div>
           </div>
         </div>
+        <div className="relative z-10 pl-[5%] pr-[5%] lg:pl-[48%] lg:pr-[10%] animate-pageFade delay-2">
+          {/* Main content */}
+          <main className="flex flex-col">
+            <div className="px-2">
+              <div className="animate-pageFade delay-3">
+                <About id="about" />
+              </div>
+              <div className="animate-pageFade delay-4">
+                <Projects id="projects" />
+              </div>
+              <div className="animate-pageFade delay-5">
+                <div className="bg-white/50 backdrop-blur-xl backdrop-saturate-150 rounded-2xl border border-white/60 shadow-lg px-4 py-6 md:px-6 max-w-3xl mb-8">
+                  <InProgress id="in-progress" />
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
       </div>
-      <div className="relative z-10 pl-[5%] pr-[5%] lg:pl-[48%] lg:pr-[10%] animate-pageFade delay-2">
-        {/* Main content */}
-        <main className="flex flex-col">
-          <div className="px-2">
-            <div className="animate-pageFade delay-3">
-              <About id="about" />
-            </div>
-            <div className="animate-pageFade delay-4">
-              <Projects id="projects" />
-            </div>
-            <div className="animate-pageFade delay-5">
-              <InProgress id="in-progress" />
-            </div>
-          </div>
-        </main>
+      <div className="relative z-10 w-full flex justify-center py-12">
+        <Footer />
       </div>
     </div>
   );

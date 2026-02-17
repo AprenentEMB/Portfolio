@@ -42,7 +42,7 @@ export function Projects({ id }) {
         {projects.map(project => (
           <div key={project.id}>
             <div
-              className="flex flex-col md:flex-row gap-6 group hover:bg-gray-200 p-2 rounded-lg transition-colors duration-300 hover:border-gray-500"
+              className="flex flex-col md:flex-row gap-6 group p-3 rounded-xl transition-all duration-300 border border-transparent bg-white/20 backdrop-blur-sm hover:bg-white/60 hover:backdrop-blur-md hover:shadow-md hover:border-white/60"
               onClick={() => setSelectedProject(project)}
             >
               <img
