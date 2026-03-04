@@ -68,42 +68,22 @@ export function InProgress({ id }) {
     <section id={id} className="mt-4 mb-12">
       <div className="text-black text-md tracking-wide font-light space-y-4">
         <p>
-          I’m currently focused on building a new SaaS product to help companies
-          organize tasks and workflows more efficiently. The goal is to deliver
-          a clean, fast, and intuitive experience while going deeper into
-          scalable backend development.
-        </p>
-
-        <p>
-          My main focus is designing a solid architecture that handles teams,
-          projects, and task activity reliably, while exploring automation that
-          improves productivity and keeps the experience lightweight.
+          My focus is on scaling and evolving Taskune, a live task management SaaS built to help companies organize and distribute work efficiently. I’m refining system design, improving performance, and preparing the upcoming 2.0 version.
         </p>
 
         <div className="border-l-4 border-emerald-400 pl-4 mt-6">
           <h3 className="text-xl font-semibold mb-1">
-            🚧 Main focus: Task Management SaaS
+           Current focus: Taskune 2.0
           </h3>
 
           <p>
-            This SaaS is a full-stack application built with{' '}
-            <strong>React</strong>, <strong>TypeScript</strong>,{' '}
-            <strong>NestJS</strong>, and <strong>Supabase</strong>, focused on
-            strong data modeling, authentication, and scalable access patterns.
-          </p>
-
-          <p className="mt-2">
-            I’m also implementing automation for task flows, reminders, and
-            scheduled processes, with the goal of shipping a production-ready
-            platform that can grow with real teams.
-          </p>
-
-          <p className="mt-2">
-            The objective is to deliver a robust, maintainable, and scalable
-            product that showcases my ability to design backend systems and work
-            comfortably across the full stack.
+            The goal for version 2.0 is to offer new useful features that complete and enhance Taskune, improving the overall experience for teams while keeping the platform intuitive and easy to use.
           </p>
         </div>
+
+        <p>
+          Alongside product development, I’m continuing my professional growth by preparing for the AWS Certified Developer – Associate certification to deepen my understanding of scalable cloud architecture and best practices.
+        </p>
       </div>
     </section>
   );

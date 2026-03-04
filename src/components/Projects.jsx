@@ -63,7 +63,7 @@ export function Projects({ id }) {
                         e.stopPropagation();
                         window.open(project.url, '_blank');
                       }}
-                      className="mt-1 text-blue-700 hover:text-blue-400 flex items-center gap-2 text-sm font-medium p-2 rounded"
+                      className="mt-1 text-slate-600 hover:text-slate-400 flex items-center gap-2 text-sm font-medium p-2 rounded"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +91,7 @@ export function Projects({ id }) {
                     return (
                       <span
                         key={tech}
-                        className="flex items-center gap-1 bg-blue-800 text-white text-xs px-2 py-1 rounded-full"
+                        className="flex items-center gap-1 bg-slate-600 text-white text-xs px-2 py-1 rounded-full"
                       >
                         {Icon && <Icon className="w-4 h-4" />}
                         {tech}

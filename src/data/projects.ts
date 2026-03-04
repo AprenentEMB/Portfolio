@@ -1,6 +1,26 @@
 const projects = [
-  {
+   {
     id: 1,
+    title: 'Taskune',
+    description:
+    'Task management SaaS for businesses that helps teams organize, assign, and track work efficiently through smart rule-based task matching.',
+    url: 'https://www.taskune.com/',
+    fullDescription:
+  'Taskune is a SaaS platform that helps businesses organize and assign tasks efficiently. It provides a customizable workspace to manage employees and tasks, with manual assignment or tag-based matching.\n\nAll tasks are displayed in a calendar view, showing whether they are assigned or pending. Employee schedules with assigned tasks can be exported as PDF.\n\nThe platform includes secure authentication, activity tracking, a 14-day free trial, and subscription management through Stripe. Additional features are available on the official website, and the platform is continuously evolving with new improvements and functionality.',
+    thumbnail: '/images/task-thumb.webp',
+    images: [
+      '/images/task-1.webp',
+      '/images/task-2.webp',
+      '/images/task-3.webp',
+      '/images/task-4.webp',
+      '/images/task-5.webp',
+      '/images/task-6.webp',
+      '/images/task-7.webp',
+    ],
+    technologies: ['NestJS', 'React', 'SQL','Supabase', 'TypeScript', 'Vite', 'Stripe'],
+  },
+  {
+    id: 2,
     title: 'Ascendra',
     description: 'An e-commerce platform for skincare products.',
     url: 'https://ascendra-affiliate.vercel.app/',
@@ -26,7 +46,7 @@ const projects = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: 'Isaac Fluxà Portfolio',
     description:
       "A minimalist portfolio showcasing Isaac Fluxà's film direction and visual storytelling work.",
@@ -43,7 +63,7 @@ const projects = [
     technologies: ['Astro', 'TypeScript', 'TailwindCSS'],
   },
   {
-    id: 3,
+    id: 4,
     title: 'WeekMePro',
     description:
       'A SaaS web application created to help users design their own personalized weekly schedule. The app focuses on simplicity and usability, allowing users to create planners freely and save them by signing up.',
@@ -71,23 +91,6 @@ const projects = [
       'Stripe',
     ],
   },
-  {
-    id: 4,
-    title: 'Felicita',
-    description:
-    'A simple and clean app to remember and celebrate important dates with your loved ones.',
-    url: 'https://felicita-frontend-roan.vercel.app/',
-    fullDescription:
-      'Felicita is a minimalist web application designed to help users remember and celebrate important dates with their loved ones. The app allows users to create and manage a list of significant dates, such as birthdays, anniversaries, and other special occasions. With a clean and intuitive interface, Felicita focuses on simplicity and ease of use, making it easy for users to stay organized and never miss an important date again.',
-    thumbnail: '/images/felicita-thumb.png',
-    images: [
-      '/images/felicita-1.png',
-      '/images/felicita-2.png',
-      '/images/felicita-3.png',
-      '/images/felicita-4.png',
-    ],
-    technologies: ['NodeJS', 'Express', 'MongoDB','React', 'TypeScript', 'Vite'],
-  }
 ];
 
 export default projects;

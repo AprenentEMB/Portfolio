@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'LaMevaFont';
-  src: url('./assets/fonts/LaMevaFont.ttf') format('truetype');
+  src: url('./assets/fonts/font2l.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'LaMevaFont';
-  src: url('./assets/fonts/LaMevaFont-Bold.ttf') format('truetype');
+  src: url('./assets/fonts/font2m.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -36,6 +36,11 @@ body,
   cursor:
     url('/icons/cursor-thin.svg') 12 12,
     auto;
+  letter-spacing: 0.1em;
+}
+
+* {
+  letter-spacing: inherit;
 }
 
 a,

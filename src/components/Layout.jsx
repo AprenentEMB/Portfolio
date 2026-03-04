@@ -147,7 +147,7 @@ export function Layout() {
                 </a>
               </div>
             </nav>
-            <div className="flex flex-row space-x-6 mt-10">
+            <div className="flex flex-row space-x-6 mt-16">
               <div className="flex flex-row space-x-4 mt-52 ml-2">
                 {/* GitHub */}
                 <a
